@@ -1,9 +1,7 @@
 fn main() {
 
-    // Variable Scope
-    {
-        let s = "hello"; // s is valid from this point forward
+    let mut s = String::from("hello");
 
-        // do stuff with s
-    }                   // this scop is now over, and s is no longer valid
+    s.push_str(", world!"); // push_str() appends a literal to a String
+    println!("{s}"); // this will print 'hello, world!'
 }
